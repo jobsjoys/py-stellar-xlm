@@ -8,7 +8,7 @@ $(document).ready(function(){
         console.log('Balance: '  + msg.balance + ' XLM | Last tx: ' + msg.amount + ' ' + msg.asset_code + ' | Memo: ' + msg.memo);
 
         $('#label').html('Balance: '  + msg.balance + ' XLM | Last tx: ' + msg.amount + ' ' + msg.asset_code + ' | Memo: ' + msg.memo);
-
+        $('body').css('background-color',msg.memo);
     });
 
 });
