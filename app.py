@@ -26,7 +26,8 @@ class getAddressDetailsThread(Thread):
         while not thread_stop_event.isSet():
 
             publickey = 'GAU3DAERZWH4DC4XTUQ5IXYHJHZ67LQ5OCXU5GJJOADIPSJMGELBJAFW'
-            address = Address(address=publickey)  # See signature for additional args
+            address = Address(address=publickey)  # testnet
+            #address = Address(address=publickey, network='public')  # livenet
             address.get()  # Get the latest information from Horizon
 
             last_payment = address.payments(order='desc', limit=1)
