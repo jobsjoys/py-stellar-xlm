@@ -5,7 +5,7 @@ from threading import Thread, Event
 from stellar_base.address import Address
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'secret!'
+
 app.config['DEBUG'] = False
 
 # turn the flask app into a socketio app
