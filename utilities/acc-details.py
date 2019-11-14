@@ -1,6 +1,6 @@
 from stellar_base.address import Address
 
-publickey = 'GD7O4V5YU62JL7BRG2NPSRWNJQIMWC7H5DELQNBPWP5MOGZVEVNEBQLR'#'GAU3DAERZWH4DC4XTUQ5IXYHJHZ67LQ5OCXU5GJJOADIPSJMGELBJAFW'
+publickey = 'GBCCC62LUXPDL7DLNQPYJWASA672CCJOLCJRBSIFXNIPRMQRRQ2HCWW6'#'GAU3DAERZWH4DC4XTUQ5IXYHJHZ67LQ5OCXU5GJJOADIPSJMGELBJAFW'
 address = Address(address=publickey)  # See signature for additional args
 address.get()  # Get the latest information from Horizon
 
@@ -23,3 +23,7 @@ if 'asset_code' in last_payment['_embedded']['records'][0]:
 if 'transaction_successful' in last_payment['_embedded']['records'][0]:
     print('success: {}'.format(bool(last_payment['_embedded']['records'][0]['transaction_successful'])))
 
+if last_payment['_embedded']['records'][0]['from'] == publickey:
+    print("Ignore")
+else:
+    print("Valid")

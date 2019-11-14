@@ -25,9 +25,10 @@ class getAddressDetailsThread(Thread):
 
         while not thread_stop_event.isSet():
 
-            publickey = 'GAU3DAERZWH4DC4XTUQ5IXYHJHZ67LQ5OCXU5GJJOADIPSJMGELBJAFW'
+            publickey = 'GBCCC62LUXPDL7DLNQPYJWASA672CCJOLCJRBSIFXNIPRMQRRQ2HCWW6'
+            target = 1000
             address = Address(address=publickey)  # testnet
-            #address = Address(address=publickey, network='public')  # livenet
+            # address = Address(address=publickey, network='public')  # livenet
             address.get()  # Get the latest information from Horizon
 
             last_payment = address.payments(order='desc', limit=1)
@@ -61,7 +62,7 @@ class getAddressDetailsThread(Thread):
             else:
                 memo = ''
 
-            socketio.emit('address_details', {'balance': balance, 'memo': memo, 'amount': amount, 'asset_code': asset_code}, namespace='/test')
+            socketio.emit('address_details', {'publickey': publickey, 'target': target, 'balance': balance, 'memo': memo, 'amount': amount, 'asset_code': asset_code}, namespace='/test')
             sleep(self.delay)
 
     def run(self):

@@ -1,16 +1,14 @@
 body * {
-	font-family: 'Nunito', sans-serif;
 	box-sizing: border-box;
 }
 
 body {
-	background-color: #AABBCC;
+	background-color: #142F4C;
 }
 
 #countdown-wrap {
   width: 100%;
-  height: 300px;
-  //border: 1px solid black;
+  height: 30px;
   padding: 20px;
   font-family: arial;
   max-width: 650px;
@@ -18,7 +16,7 @@ body {
 }
 
 #goal {
-  font-size: 48px;
+  font-size: 24px;
   text-align: right;
   color: #FFF;
   @media only screen and (max-width : 640px) {
@@ -47,7 +45,6 @@ body {
 
 .goal-stat {
   width: 25%;
-  //height: 30px;
   padding: 10px;
   float: left;
   margin: 0;
@@ -65,4 +62,20 @@ body {
 
 .goal-number {
   font-weight: bold;
+}
+
+
+.address {
+  font-size: 15.5px;
+  padding-top: 60px;
+  float: left;
+  margin: 0;
+  color: #FFF;
+  font-weight: bold;
+}
+
+.address-label {
+  float: left;
+  margin: 0;
+  color: #FFF;
 }
