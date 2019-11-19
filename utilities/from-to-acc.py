@@ -4,8 +4,8 @@ builder = Builder(secret=seed)
 # builder = Builder(secret=seed, network='public') for LIVENET
 
 bob_address = 'GBCCC62LUXPDL7DLNQPYJWASA672CCJOLCJRBSIFXNIPRMQRRQ2HCWW6'
-builder.append_payment_op(bob_address, '10', 'XLM')
-builder.add_text_memo("zxc") # string length <= 28 bytes
+builder.append_payment_op(bob_address, '100', 'XLM')
+builder.add_text_memo("K L P") # string length <= 28 bytes
 builder.sign()
 
 # Uses an internal horizon instance to submit over the network
